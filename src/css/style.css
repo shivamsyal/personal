@@ -8,6 +8,7 @@ html, body {
       font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif !important;
       background: rgb(10, 25, 47) !important;
       color: rgb(204, 214, 246) !important;
+      scroll-behavior: smooth;
 }
 p{
   color: rgb(136, 146, 176) !important;
@@ -373,14 +374,14 @@ nav #menu li a:hover {
 .social a {
   position: relative;
   top: 0;
-  transition: all ease 0.2s;
+  transition: all ease 0.25s;
   color: #fff;
   font-size: 20px;
   margin: 0 10px;
   z-index: 100;
 }
 .social a:hover {
-  top: -5px;
+  top: -2px;
   color: rgb(100, 255, 218);
   text-decoration: none;
 }
@@ -400,83 +401,118 @@ h6 {
       position: absolute;
       left: 50%;
 }
+section {
+  margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+    display: block;
+}
 
 .project {
-      height: 500px;
+  display: grid;
+gap: 10px;
+grid-template-columns: repeat(12, 1fr);
+-webkit-box-align: center;
+align-items: center;
+}
+.project-content2 {
+  position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+
+}
+.project-content1 {
+  grid-column: 7 / -1;
+    text-align: right;
+    position: relative;
+    grid-area: 1 / 6 / -1 / 12;
+
+
+}
+.project-overline {
+  margin: 10px 0px;
+    color: #64ffda !important;
+    font-family: "Source Code Pro";
+    font-size: 13px;
+    font-weight: 400;
+}
+.project-title{
+  margin: 0px 0px 20px;
+  color: #ccd6f6;
+    font-size: clamp(24px, 5vw, 28px);
+    font-weight: 600;
+    line-height: 1.1;
+
+}
+.project-description {
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #112240;
+    color: #a8b2d1;
+    font-size: 18px;
 }
 
-.project1 {
-      background: url(../../img/shivam.jpg) no-repeat 50% 25%;
-      background-size:cover;
+.project-image1 {
+  grid-column: 1 / 8;
+  grid-area: 1 / 1 / -1 / 8;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 }
 
-.project1::after {
-      content: "Shivam Syal";
-      font-family: "Poppins";
-      font-size: 36px;
-      position: relative;
-      font-weight: 700;
-      color: #fff;
-      display: block;
-      top: 80%;
-      left: -60%;
-      right: 0;
-      bottom: 0;
+.project-image2 {
+  grid-area: 1 / 6 / -1 / -1;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 }
+
+.project .project-image a::before {
+  content: "";
+    position: absolute;
+    width: 569px;
+    height: 360px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 3;
+}
+.img{
+  top:0;
+  width: 569px;
+  height: 360px;
+  transition: all ease 0.25s;
+  border-radius: 5px;
+}
+.img:hover{
+  top:-10px;
+}
+
+
+
 
 .project2 {
       background: url(https://images.unsplash.com/photo-1468870045442-e7d799d8c98a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2448&q=80) no-repeat 50% 50%;
-      background-size: cover;
+      background-size: 500px 500px;
 }
 
-.project2::after {
-      content: "foretime.";
-      font-family: "Poppins";
-      font-size: 36px;
-      position: relative;
-      color: #000;
-      display: block;
-      top: 80%;
-      left: 90%;
-      right: 0;
-      bottom: 0;
-}
 
 .project3 {
       background: url(https://images.unsplash.com/photo-1482501157762-56897a411e05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat 50% 50%;
-      background-size: cover;
+      background-size: 500px 500px;
 }
 
-.project3::after {
-      content: "never again.";
-      font-family: "Poppins";
-      font-size: 36px;
-      position: relative;
-      color: #000;
-      display: block;
-      top: 80%;
-      left: -50%;
-      right: 0;
-      bottom: 0;
-}
+
 
 .project4 {
       background: url(https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1785&q=80) no-repeat 50% 50%;
-      background-size: cover;
+      background-size: 500px 500px;
 }
 
-.project4::after {
-      content: "departure.";
-      font-family: "Poppins";
-      font-size: 36px;
-      position: relative;
-      color: #000;
-      display: block;
-      top: 10%;
-      left: 90%;
-      right: 0;
-      bottom: 0;
-}
+
 
 @media(max-width: 768px) {
       .project {
