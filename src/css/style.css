@@ -316,7 +316,9 @@ nav #menu li a:hover {
       display: flex;
       align-items: center;
       justify-content: center;
+      top: 0;
 }
+
 
 
 .hero h1 {
@@ -768,4 +770,27 @@ textarea:focus {
 
 .next p {
       text-align: right;
+}
+
+.project-links {
+  display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 3px;
+    margin-left: -10px;
+
+}
+.project-links a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 22px;
+  color: rgb(204, 214, 246);
+  transition: all ease 0.35s;
+
+}
+
+.project-links a:hover {
+  color: rgb(100, 255, 218);
+  text-decoration: none;
 }
