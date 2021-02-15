@@ -633,7 +633,7 @@ align-items: center;
 }
 
 .image {
-      background: url('../../img/about_banner.png') no-repeat 0% 00%;
+      background: url('../../img/about_banner.png') no-repeat 0% 85%;
 }
 #link {
   position: relative;
