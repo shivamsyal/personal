@@ -91,7 +91,7 @@ p{
 }
 @media(max-width: 768px) {
       .line {
-            width: 3em;
+            width: 1em;
 
       }
       .anim-typewriter{
@@ -117,7 +117,7 @@ p{
                   width: 0;
             }
             to {
-                  width: 18.5em;
+                  width: 18em;
             }
       }
 }
@@ -131,6 +131,8 @@ p{
             border-right-color: transparent;
       }
 }
+
+
 
 /*--------------- navigation --------------- */
 nav {
@@ -229,7 +231,7 @@ nav #menu li a:hover {
 }
 
 #resize {
-      z-index: 1;
+      z-index: 5;
       top: 0px;
       position: fixed;
       background: rgb(10, 25, 47);
@@ -332,13 +334,13 @@ nav #menu li a:hover {
 
 @media(max-width: 768px) {
       .header h1 {
-            font-size: 21px;
+            font-size: 23px;
       }
       .in1{
-        font-size: 12px;
+        font-size: 15px;
       }
       .in2{
-        font-size: 23px;
+        font-size: 45px;
       }
 }
 
@@ -429,9 +431,36 @@ align-items: center;
     text-align: right;
     position: relative;
     grid-area: 1 / 6 / -1 / 12;
+}
 
+@media (max-width: 768px) {
+  .project-content1 {
+    grid-column: 1 / -1;
+    padding: 40px 40px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 5;
+  }
 
 }
+
+@media (max-width: 786px) {
+  .project-content2 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    grid-column: 1 / -1;
+    padding: 40px 40px 30px;
+    z-index: 5;
+  }
+}
+
 .project-overline {
   margin: 10px 0px;
     color: #64ffda !important;
@@ -447,6 +476,14 @@ align-items: center;
     line-height: 1.1;
 
 }
+
+@media (max-width: 786px) {
+  .project-title {
+    color: #e6f1ff;
+  }
+
+}
+
 .project-description {
   box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     position: relative;
@@ -458,6 +495,16 @@ align-items: center;
     font-size: 18px;
 }
 
+@media (max-width: 768px) {
+  .project-description {
+    padding: 20px 0px;
+    background-color: transparent;
+    box-shadow: none;
+    color: #e6f1ff;
+  }
+
+}
+
 .project-image1 {
   grid-column: 1 / 8;
   grid-area: 1 / 1 / -1 / 8;
@@ -465,6 +512,28 @@ align-items: center;
     z-index: 1;
     box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
 }
+
+@media (max-width: 768px) {
+  .project-image1 {
+    grid-column: 1 / -1;
+    height: 100%;
+    opacity: 0.25;
+  }
+
+}
+
+@media (max-width: 786px) {
+  .project-image2 {
+    grid-column: 1 / -1 !important;
+    height: 100%;
+    opacity: 0.25;
+  }
+
+}
+
+
+
+
 
 .project-image2 {
   grid-area: 1 / 6 / -1 / -1;
@@ -476,8 +545,7 @@ align-items: center;
 .project .project-image a::before {
   content: "";
     position: absolute;
-    width: 569px;
-    height: 360px;
+
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -486,10 +554,12 @@ align-items: center;
 }
 .img{
   top:0;
-  width: 569px;
+  max-width: 569px;
   height: 360px;
   transition: all ease 0.25s;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 .img:hover{
   top:-10px;
