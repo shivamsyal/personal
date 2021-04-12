@@ -409,7 +409,8 @@ h6 {
 }
 #projects {
   margin: 0px auto;
-    padding: 100px 0px;
+    padding-top: 100px;
+    padding-bottom: 0px;
     max-width: 1000px;
     display: block;
 }
@@ -759,6 +760,14 @@ ul.skills-list li::before{
 
 /*--------------- contact form --------------- */
 
+.hero-content {
+  margin: 0px auto;
+  padding: 0px 0px;
+  max-width: 1030px;
+  display: block;
+  text-align: center;
+}
+
 .email-link {
   color: #64ffda;
   background-color: transparent;
@@ -771,7 +780,19 @@ ul.skills-list li::before{
   text-decoration: none;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-  margin-top: 50px;
+  margin-top: 10px;
+
+
+  display: inline-block;
+  position: relative;
+
+}
+
+.email-link:hover {
+  text-decoration: none;
+  color: #64ffda;
+  background-color: rgba(100, 255, 218, 0.1)
+
 }
 
 /*--------------- project page --------------- */
